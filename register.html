@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id = "header">
+        <div id ="logo">
+            <img src="./Asset/Logo_-_1.png" alt="">
+        </div>
+        <div class = "navbar">
+            <a href="./index.html">Home</a>
+            <a href="./character.html">Characters</a>
+            <a href="./aboutGame.html">About Game</a>
+            <a href="./gallery.html">Gallery</a>
+            <div class="dropdown">
+                <button onclick ="myFunction()" class="drop">More</button>
+                <div id="myDropdown" class = "dropdown-content">
+                    <a href="./latest.html">Latest</a>
+                    <a href="./info.html">Info</a>
+                    <a href="./update.html">Update</a>
+                    <a href="./event.html">Events</a>
+                </div>
+            </div>
+        </div>
+        <div class = "reg">
+            <div id ='log'>
+                <a href="./login.html">Login</a>
+            </div>
+            <div id = "Register">
+                <a href="./register.html">Register</a>
+            </div>
+        </div>
+    </div>
+    <div id="content-register">
+        <div id='box'>
+            <div>
+                <h1 id="judul">Register</h1>
+            </div>
+            <div class="form">
+                <p>Username*</p>
+                <input type="text" name="" id="username" class="kotak" placeholder = "username">
+                <br>
+                <p>Email address*</p>
+                <input type="email" name="" id="email" class="kotak" placeholder = "email">
+                <br>
+                <p>Handphone number*</p>
+                <input type="number" name="" id="noHp" class="kotak" placeholder = "Handphone number">
+                <br>
+                <p>Password*</p>
+                <input type="password" name="" id="password" class="kotak" placeholder="password">
+                <br>
+                <p>Confirm Password*</p>
+                <input type="password" name="" id="confirm" class="kotak" placeholder="confirm password">
+                <br>
+                <div>
+                <input type="checkbox" name="" id="checkbox" class="">I agree with Terms & Conditions.
+                </div>   
+                <br>
+                <div class="btn-register">
+                    <button onclick="check()">
+                        REGISTER
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="link">
+            <a href="http://facebook.com/cindy.natasya.9883">
+                <img src="./Asset/facebook.png" alt="">
+            </a>
+            <a href="https://twitter.com/Cindynatasya19">
+                <img src="./Asset/twitter.png" alt="">
+            </a>
+            <a href="http://instagram.com/cnpvrs11/">
+                <img src="./Asset/instagram.png" alt="">
+            </a>
+            <a href="http://twitch.com">
+                <img src="./Asset/twitch.png" alt="">
+            </a>
+            <a href="http://www.youtube.com/channel/UCuiY-HRkQZcC7AYAsBxR7NA">
+                <img src="./Asset/youtube.png" alt="">
+            </a>
+        </div>
+        <br>
+        <div class = "footerbar">
+            <a href="./privacyPolicy.html">Privacy Policy</a>
+            <p>|</p>
+            <a href="./terms.html">Terms of Service</a>
+            <p>|</p>
+            <a href="./aboutUs.html">About Us</a>
+            <p>|</p>
+            <a href="./contactUs.html">Contact Us</a>
+        </div>
+        <br>
+        <div id="cp">
+            <p>Copyright © 2021</p>
+        </div>
+    </div>
+
+    <script>
+        let inputUsername;
+        let inputEmail;
+        let inputNumber;
+        let inputPassword;
+        let inputConfirmPassword;
+        let inputcheckbox;
+        var emailformat;
+        function check(){
+            inputUsername = document.getElementById("username").value;
+            if(inputUsername.length<5 || inputUsername.length>15){
+                alert("Username must be 5-15 characters!");
+            }
+            emailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            inputEmail = document.getElementById("email").value;
+            if (!inputEmail.match(emailformat)){
+                alert("Invalid Email Address!");
+            }
+            inputNumber = document.getElementById("noHp").value;
+            if(inputNumber.length < 10 || inputNumber.length>13){
+                alert("Handphone number must be 10-13 number!");
+            }
+            inputPassword = document.getElementById("password").value;
+            if(inputPassword.length<6 || inputPassword.length>8){
+                alert("Password must be 6-8 characters!");
+            }
+            inputConfirmPassword = document.getElementById("confirm").value;
+            if(inputConfirmPassword.length<6 || inputConfirmPassword.length>8){
+                alert("Password must be 6-8 characters!");
+            }
+            else if(inputConfirmPassword != inputPassword){
+                alert("Confirm Password must same with Password");
+            }
+            inputcheckbox = document.getElementById("checkbox").checked;
+            if(inputcheckbox == false){
+                alert("You must agree with the Terms & Condition!")
+            }
+
+        }
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.drop')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Asset/Logo_-_1.png">
+</head>
+<body>
+    <div id = "header">
+        <div id ="logo">
+            <img src="./Asset/Logo_-_1.png" alt="">
+        </div>
+        <div class = "navbar">
+            <a href="./index.html">Home</a>
+            <a href="./character.html">Characters</a>
+            <a href="./aboutGame.html">About Game</a>
+            <a href="./gallery.html">Gallery</a>
+            <div class="dropdown">
+                <button onclick ="myFunction()" class="drop">More</button>
+                <div id="myDropdown" class = "dropdown-content">
+                    <a href="./latest.html">Latest</a>
+                    <a href="./info.html">Info</a>
+                    <a href="./update.html">Update</a>
+                    <a href="./event.html">Events</a>
+                </div>
+            </div>
+        </div>
+        <div class = "reg">
+            <div id ='log'>
+                <a href="./login.html">Login</a>
+            </div>
+            <div id = "Register">
+                <a href="./register.html">Register</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id = "contentUP">
+        <h2>Update</h2>
+        <div id="update">
+            <div id="detail">
+                <h1>System Update: Seasonal Spirits</h1>
+                <p>We’ve celebrated nine unique seasons, and welcomed a whopping fifty seasonal spirits to the realms! These spirits have each brought unique stories and opportunities for self-expression that have enriched the world in ways we see everyday through our players.</p>
+            </div>
+            <img src="./Asset/Update/systemupdate-seasonalspirits_blogheader.png" alt="">
+        </div>
+        <div id="update">
+            <div id="detail">
+                <h1>Launch Update: Days of Nature</h1>
+                <p>Welcome to Days of Nature, Kenshin Impact’s upcoming new in-game charity event benefiting marine life! For Earth Day this year, we’re proud to announce that we’ll be donating half of the net proceeds from our Earth Day items to charities focused on removing plastic from our oceans.</p>
+            </div>
+            <img src="./Asset/Update/days_of_nature_launch_blog_afab8614af.png" alt="">
+        </div>
+        <div id="update">
+            <div id="detail">
+                <h1>Doctors Without Borders/Médecins Sans Frontières (MSF) Update</h1>
+                <p>We were incredibly grateful for the passion and generosity of our Acinyu community, and humbled that our player base came together to support real life action to affect the world in a positive and meaningful way. Close to a year on, we are proud to share an update about how our fans’ generosity helped make MSF’s rapid response to the pandemic possible.</p>
+            </div>
+            <img src="./Asset/Update/large_days_of_healing_1_8cfdf0504c.png" alt="">
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="link">
+            <a href="http://facebook.com/cindy.natasya.9883">
+                <img src="./Asset/facebook.png" alt="">
+            </a>
+            <a href="https://twitter.com/Cindynatasya19">
+                <img src="./Asset/twitter.png" alt="">
+            </a>
+            <a href="http://instagram.com/cnpvrs11/">
+                <img src="./Asset/instagram.png" alt="">
+            </a>
+            <a href="http://twitch.com">
+                <img src="./Asset/twitch.png" alt="">
+            </a>
+            <a href="http://www.youtube.com/channel/UCuiY-HRkQZcC7AYAsBxR7NA">
+                <img src="./Asset/youtube.png" alt="">
+            </a>
+        </div>
+        <br>
+        <div class = "footerbar">
+            <a href="./privacyPolicy.html">Privacy Policy</a>
+            <p>|</p>
+            <a href="./terms.html">Terms of Service</a>
+            <p>|</p>
+            <a href="./aboutUs.html">About Us</a>
+            <p>|</p>
+            <a href="./contactUs.html">Contact Us</a>
+        </div>
+        <br>
+        <div id="cp">
+            <p>Copyright © 2021</p>
+        </div>
+    </div>
+    <script>
+         function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.drop')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

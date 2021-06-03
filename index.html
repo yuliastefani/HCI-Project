@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenshin Impact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id = "header">
+        <div id ="logo">
+            <img src="./Asset/Logo_-_1.png" alt="">
+        </div>
+        <div class = "navbar">
+            <a href="./index.html">Home</a>
+            <a href="./character.html">Characters</a>
+            <a href="./aboutGame.html">About Game</a>
+            <a href="./gallery.html">Gallery</a>
+            <div class="dropdown">
+                <button onclick ="myFunction()" class="drop">More</button>
+                <div id="myDropdown" class = "dropdown-content">
+                    <a href="./latest.html">Latest</a>
+                    <a href="./info.html">Info</a>
+                    <a href="./update.html">Update</a>
+                    <a href="./event.html">Events</a>
+                </div>
+            </div>
+        </div>
+        <div class = "reg">
+            <div id ='log'>
+                <a href="./login.html">Login</a>
+            </div>
+            <div id = "Register">
+                <a href="./register.html">Register</a>
+            </div>
+        </div>
+    </div>
+    <div id = "content">
+        
+        <div id = "content-text">
+            <p>
+                Welcome to the enchanting world of Kenshin Impact, a beautiful-animated kingdom waiting to be explored by you and your loved ones
+            </p>
+        </div>
+        
+        <div id="ImageSlider">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img src="./Asset/Fortune_Cape_Wool_Hat_SMALL_6c43da49ec.png" style="width: 100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="./Asset/screen-15.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="./Asset/screen-16.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="./Asset/screen-17.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="./Asset/screen-18.jpg" style="width:100%">
+                </div>
+
+                <br>
+                
+                <div id="slide">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                  <span class="dot" onclick="currentSlide(4)"></span>
+                  <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="link">
+            <a href="http://facebook.com/cindy.natasya.9883">
+                <img src="./Asset/facebook.png" alt="">
+            </a>
+            <a href="https://twitter.com/Cindynatasya19">
+                <img src="./Asset/twitter.png" alt="">
+            </a>
+            <a href="http://instagram.com/cnpvrs11/">
+                <img src="./Asset/instagram.png" alt="">
+            </a>
+            <a href="http://twitch.com">
+                <img src="./Asset/twitch.png" alt="">
+            </a>
+            <a href="http://www.youtube.com/channel/UCuiY-HRkQZcC7AYAsBxR7NA">
+                <img src="./Asset/youtube.png" alt="">
+            </a>
+        </div>
+        <br>
+        <div class = "footerbar">
+            <a href="./privacyPolicy.html">Privacy Policy</a>
+            <p>|</p>
+            <a href="./terms.html">Terms of Service</a>
+            <p>|</p>
+            <a href="./aboutUs.html">About Us</a>
+            <p>|</p>
+            <a href="./contactUs.html">Contact Us</a>
+        </div>
+        <br>
+        <div id="cp">
+            <p>Copyright © 2021</p>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.drop')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        
+        </script>
+</body>
+</html>

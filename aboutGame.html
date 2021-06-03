@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id = "header">
+        <div id ="logo">
+            <img src="./Asset/Logo_-_1.png" alt="">
+        </div>
+        <div class = "navbar">
+            <a href="./index.html">Home</a>
+            <a href="./character.html">Characters</a>
+            <a href="./aboutGame.html">About Game</a>
+            <a href="./gallery.html">Gallery</a>
+            <div class="dropdown">
+                <button onclick ="myFunction()" class="drop">More</button>
+                <div id="myDropdown" class = "dropdown-content">
+                    <a href="./latest.html">Latest</a>
+                    <a href="./info.html">Info</a>
+                    <a href="./update.html">Update</a>
+                    <a href="./event.html">Events</a>
+                </div>
+            </div>
+        </div>
+        <div class = "reg">
+            <div id ='log'>
+                <a href="./login.html">Login</a>
+            </div>
+            <div id = "Register">
+                <a href="./register.html">Register</a>
+            </div>
+        </div>
+    </div>
+    <div id = "contentAG">
+        <div id="welcome">
+            <p>Available on 31/02/2022!</p>
+        </div>
+        <div id="gameSS">
+            <h1>Game ScreenShot</h1>
+            <div class="slideshow-containerAG">
+
+                <div class="mySlides AG">
+                  <img src="./Asset/About Game/Features002.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides AG">
+                  <img src="./Asset/About Game/Forest004.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides AG">
+                  <img src="./Asset/About Game/Forest009.png" style="width:100%">
+                </div>
+                
+                <a class="prevAG" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="nextAG" onclick="plusSlides(1)">&#10095;</a>
+                
+            </div>
+                
+        </div>
+        <div id="gameFeature">
+            <h1>Game Features</h1>
+            <div id="gf">
+                <div id="text">
+                    <h2>The Advanture Begin</h2>
+                    <br>
+                    <p>From adventure seasons, in-game events to an ever-expanding world of friendships and collectibles to unlock, there’s much to do in Sky.</p>
+                </div>
+                <img src="./Asset/About Game/Features001.png" alt="">
+            </div>
+            <div id="gf">
+                <img src="./Asset/About Game/Features002.png" alt="">
+                <div id="text">
+                    <h2>Explore the world</h2>
+                    <br>
+                    <p>Hold hands and take flight in an unforgettable social adventure together with loved ones. Explore the seven realms of this beautifully-animated kingdom with other players where compassion, community and wonder greet you at each turn.</p>
+                </div>
+            </div>
+            <div id="gf">
+                <div id="text">
+                    <h2>Fly with Friends</h2>
+                    <br>
+                    <p>Restore the fallen light back to the constellations by helping others. Here’s an introduction to get started in the kingdom</p>
+                </div>
+                <img src="./Asset/About Game/Features003.png" alt="">
+            </div>
+        </div>
+        <div id="gameAv">
+            <h1>Let light be the guide!</h1>
+            <h3>Available On</h3>
+            <div id="compability">
+                <a href="https://www.nintendo.com/games/">
+                    <img src="./Asset/About Game/nintendo-switch 1.png" alt="">
+                </a>
+                <a href="https://play.google.com/store">
+                    <img src="./Asset/About Game/android-logo 1.png" alt="">
+                </a>
+                <a href="https://www.apple.com/id/app-store/">
+                    <img src="./Asset/About Game/apple 1.png" alt="">
+                </a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="footer">
+        <div id="link">
+            <a href="http://facebook.com/cindy.natasya.9883">
+                <img src="./Asset/facebook.png" alt="">
+            </a>
+            <a href="https://twitter.com/Cindynatasya19">
+                <img src="./Asset/twitter.png" alt="">
+            </a>
+            <a href="http://instagram.com/cnpvrs11/">
+                <img src="./Asset/instagram.png" alt="">
+            </a>
+            <a href="http://twitch.com">
+                <img src="./Asset/twitch.png" alt="">
+            </a>
+            <a href="http://www.youtube.com/channel/UCuiY-HRkQZcC7AYAsBxR7NA">
+                <img src="./Asset/youtube.png" alt="">
+            </a>
+        </div>
+        <br>
+        <div class = "footerbar">
+            <a href="./privacyPolicy.html">Privacy Policy</a>
+            <p>|</p>
+            <a href="./terms.html">Terms of Service</a>
+            <p>|</p>
+            <a href="./aboutUs.html">About Us</a>
+            <p>|</p>
+            <a href="./contactUs.html">Contact Us</a>
+        </div>
+        <br>
+        <div id="cp">
+            <p>Copyright © 2021</p>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.drop')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        </script>
+
+</body>
+</html>

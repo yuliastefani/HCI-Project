@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Asset/Logo_-_1.png">
+</head>
+<body>
+    <div id = "header">
+        <div id ="logo">
+            <img src="./Asset/Logo_-_1.png" alt="">
+        </div>
+        <div class = "navbar">
+            <a href="./index.html">Home</a>
+            <a href="./character.html">Characters</a>
+            <a href="./aboutGame.html">About Game</a>
+            <a href="./gallery.html">Gallery</a>
+            <div class="dropdown">
+                <button onclick ="myFunction()" class="drop">More</button>
+                <div id="myDropdown" class = "dropdown-content">
+                    <a href="./latest.html">Latest</a>
+                    <a href="./info.html">Info</a>
+                    <a href="./update.html">Update</a>
+                    <a href="./event.html">Events</a>
+                </div>
+            </div>
+        </div>
+        <div class = "reg">
+            <div id ='log'>
+                <a href="./login.html">Login</a>
+            </div>
+            <div id = "Register">
+                <a href="./register.html">Register</a>
+            </div>
+        </div>
+    </div>
+    <div id = "contentIF">
+        <h2>Information</h2>
+        <div id="info">
+            <div id="detail">
+                <h1>Nintendo Switch Frequently Asked Questions</h1>
+                <p>Since announcing that Kenshin Impact will launch on Nintendo Switch in June, we’ve received a lot of questions! We’re still working on answers to some of the questions, and we have some other information that we’re not quite ready to share just yet, but answers to some questions can be found below.</p>
+            </div>
+            <img src="./Asset/Info//2kidsbespokebig.png" alt="">
+        </div>
+        <div id="info">
+            <div id="detail">
+                <h1>Regarding Hacking in Kenshin Impact</h1>
+                <p>Since the launch of Kenshin Impact, we’ve been committed to creating exciting new content, squashing bugs, and working to bring the game to new players on additional platforms. Being a small team, we tend to focus on a few projects at any given time, and we often choose those projects based on what we believe represents the greatest value to our global community.</p>
+            </div>
+            <img src="./Asset/Info/forestbg_website.png" alt="">
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="link">
+            <a href="http://facebook.com/cindy.natasya.9883">
+                <img src="./Asset/facebook.png" alt="">
+            </a>
+            <a href="https://twitter.com/Cindynatasya19">
+                <img src="./Asset/twitter.png" alt="">
+            </a>
+            <a href="http://instagram.com/cnpvrs11/">
+                <img src="./Asset/instagram.png" alt="">
+            </a>
+            <a href="http://twitch.com">
+                <img src="./Asset/twitch.png" alt="">
+            </a>
+            <a href="http://www.youtube.com/channel/UCuiY-HRkQZcC7AYAsBxR7NA">
+                <img src="./Asset/youtube.png" alt="">
+            </a>
+        </div>
+        <br>
+        <div class = "footerbar">
+            <a href="./privacyPolicy.html">Privacy Policy</a>
+            <p>|</p>
+            <a href="./terms.html">Terms of Service</a>
+            <p>|</p>
+            <a href="./aboutUs.html">About Us</a>
+            <p>|</p>
+            <a href="./contactUs.html">Contact Us</a>
+        </div>
+        <br>
+        <div id="cp">
+            <p>Copyright © 2021</p>
+        </div>
+    </div>
+    <script>
+         function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.drop')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

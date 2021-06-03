@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Asset/Logo_-_1.png">
+</head>
+<body>
+    <div id = "header">
+        <div id ="logo">
+            <img src="./Asset/Logo_-_1.png" alt="">
+        </div>
+        <div class = "navbar">
+            <a href="./index.html">Home</a>
+            <a href="./character.html">Characters</a>
+            <a href="./aboutGame.html">About Game</a>
+            <a href="./gallery.html">Gallery</a>
+            <div class="dropdown">
+                <button onclick ="myFunction()" class="drop">More</button>
+                <div id="myDropdown" class = "dropdown-content">
+                    <a href="./latest.html">Latest</a>
+                    <a href="./info.html">Info</a>
+                    <a href="./update.html">Update</a>
+                    <a href="./event.html">Events</a>
+                </div>
+            </div>
+        </div>
+        <div class = "reg">
+            <div id ='log'>
+                <a href="./login.html">Login</a>
+            </div>
+            <div id = "Register">
+                <a href="./register.html">Register</a>
+            </div>
+        </div>
+    </div>
+    <div id = "contentLA">
+        <h2>Latest</h2>
+        <div id="update">
+            <div id="detail">
+                <h1>System Update: Seasonal Spirits</h1>
+                <p>We’ve celebrated nine unique seasons, and welcomed a whopping fifty seasonal spirits to the realms! These spirits have each brought unique stories and opportunities for self-expression that have enriched the world in ways we see everyday through our players.</p>
+            </div>
+            <img src="./Asset/Update/systemupdate-seasonalspirits_blogheader.png" alt="">
+        </div>
+        <div id="event">
+            <div id="detail">
+                <h1>Event Preview: Days of Nature</h1>
+                <p>Take a behind-the-scenes glimpse of Kenshin Impact’s upcoming new in-game charity event benefiting marine life — Days of Nature! This year, we’re proud to announce that we’ll be donating half of the net proceeds from our Earth Day items to charities focused on removing plastic from our oceans.</p>
+            </div>
+            <img src="./Asset/Event/days_of_nature_blog_c91b2315e2.png" alt="">
+        </div>
+        <div id="info">
+            <div id="detail">
+                <h1>Nintendo Switch Frequently Asked Questions</h1>
+                <p>Since announcing that Kenshin Impact will launch on Nintendo Switch in June, we’ve received a lot of questions! We’re still working on answers to some of the questions, and we have some other information that we’re not quite ready to share just yet, but answers to some questions can be found below.</p>
+            </div>
+            <img src="./Asset/Info//2kidsbespokebig.png" alt="">
+        </div>
+        <div id="update">
+            <div id="detail">
+                <h1>Launch Update: Days of Nature</h1>
+                <p>Welcome to Days of Nature, Kenshin Impact’s upcoming new in-game charity event benefiting marine life! For Earth Day this year, we’re proud to announce that we’ll be donating half of the net proceeds from our Earth Day items to charities focused on removing plastic from our oceans.</p>
+            </div>
+            <img src="./Asset/Update/days_of_nature_launch_blog_afab8614af.png" alt="">
+        </div>
+        <div id="event">
+            <div id="detail">
+                <h1>SEASON OF ASSEMBLY</h1>
+                <p>Be prepared to pledge allegiance as a Scout - to honor the skies and these friendships of a lifetime! For this Season, players will meet a lone Scout Season Guide who needs to rebuild an abandoned treehouse alongside the lost kinships from scouthoods past. Along the way, you will visit the dwellings of the other Scouts to gather items to improve the main space.</p>
+            </div>
+            <img src="./Asset/Event/large_2kids_basecamp_blank_c983007362.png" alt="">
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="link">
+            <a href="http://facebook.com/cindy.natasya.9883">
+                <img src="./Asset/facebook.png" alt="">
+            </a>
+            <a href="https://twitter.com/Cindynatasya19">
+                <img src="./Asset/twitter.png" alt="">
+            </a>
+            <a href="http://instagram.com/cnpvrs11/">
+                <img src="./Asset/instagram.png" alt="">
+            </a>
+            <a href="http://twitch.com">
+                <img src="./Asset/twitch.png" alt="">
+            </a>
+            <a href="http://www.youtube.com/channel/UCuiY-HRkQZcC7AYAsBxR7NA">
+                <img src="./Asset/youtube.png" alt="">
+            </a>
+        </div>
+        <br>
+        <div class = "footerbar">
+            <a href="./privacyPolicy.html">Privacy Policy</a>
+            <p>|</p>
+            <a href="./terms.html">Terms of Service</a>
+            <p>|</p>
+            <a href="./aboutUs.html">About Us</a>
+            <p>|</p>
+            <a href="./contactUs.html">Contact Us</a>
+        </div>
+        <br>
+        <div id="cp">
+            <p>Copyright © 2021</p>
+        </div>
+    </div>
+    <script>
+         function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.drop')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
