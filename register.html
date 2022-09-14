@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Asset/Logo_-_1.png">
 </head>
 <body>
     <div id = "header">
@@ -18,7 +19,7 @@
             <a href="./aboutGame.html">About Game</a>
             <a href="./gallery.html">Gallery</a>
             <div class="dropdown">
-                <button onclick ="myFunction()" class="drop">More</button>
+                <button id="More" onclick ="myFunction()" class="drop">More</button>
                 <div id="myDropdown" class = "dropdown-content">
                     <a href="./latest.html">Latest</a>
                     <a href="./info.html">Info</a>
@@ -42,16 +43,16 @@
                 <h1 id="judul">Register</h1>
             </div>
             <div class="form">
-                <p>Username*</p>
+                <p>Username</p>
                 <input type="text" name="" id="username" class="kotak" placeholder = "username">
                 <br>
-                <p>Email address*</p>
-                <input type="email" name="" id="email" class="kotak" placeholder = "email">
+                <p>Email address</p>
+                <input type="text" name="" id="email" class="kotak" placeholder = "email">
                 <br>
-                <p>Handphone number*</p>
-                <input type="number" name="" id="noHp" class="kotak" placeholder = "Handphone number">
+                <p>Handphone number</p>
+                <input type="text" name="" id="noHp" class="kotak" placeholder = "Handphone number">
                 <br>
-                <p>Password*</p>
+                <p>Password</p>
                 <input type="password" name="" id="password" class="kotak" placeholder="password">
                 <br>
                 <p>Confirm Password*</p>
@@ -59,7 +60,7 @@
                 <br>
                 <div>
                 <input type="checkbox" name="" id="checkbox" class="">I agree with Terms & Conditions.
-                </div>   
+                </div>
                 <br>
                 <div class="btn-register">
                     <button onclick="check()">
@@ -102,63 +103,6 @@
             <p>Copyright © 2021</p>
         </div>
     </div>
-
-    <script>
-        let inputUsername;
-        let inputEmail;
-        let inputNumber;
-        let inputPassword;
-        let inputConfirmPassword;
-        let inputcheckbox;
-        var emailformat;
-        function check(){
-            inputUsername = document.getElementById("username").value;
-            if(inputUsername.length<5 || inputUsername.length>15){
-                alert("Username must be 5-15 characters!");
-            }
-            emailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-            inputEmail = document.getElementById("email").value;
-            if (!inputEmail.match(emailformat)){
-                alert("Invalid Email Address!");
-            }
-            inputNumber = document.getElementById("noHp").value;
-            if(inputNumber.length < 10 || inputNumber.length>13){
-                alert("Handphone number must be 10-13 number!");
-            }
-            inputPassword = document.getElementById("password").value;
-            if(inputPassword.length<6 || inputPassword.length>8){
-                alert("Password must be 6-8 characters!");
-            }
-            inputConfirmPassword = document.getElementById("confirm").value;
-            if(inputConfirmPassword.length<6 || inputConfirmPassword.length>8){
-                alert("Password must be 6-8 characters!");
-            }
-            else if(inputConfirmPassword != inputPassword){
-                alert("Confirm Password must same with Password");
-            }
-            inputcheckbox = document.getElementById("checkbox").checked;
-            if(inputcheckbox == false){
-                alert("You must agree with the Terms & Condition!")
-            }
-
-        }
-
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-        window.onclick = function(event) {
-            if (!event.target.matches('.drop')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
-
+    <script src="./registerJS.js"></script>
 </body>
 </html>
